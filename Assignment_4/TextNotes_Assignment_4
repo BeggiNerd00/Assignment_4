@@ -1,0 +1,32 @@
+
+
+
+
+
+List<int> calculate_sum = [13,56,77,3,45,6,944,1,43,7,40,55,67,93,45,754,33];
+
+Not done:
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Done:
+
+1. Write a program to find the sum of all elements of the Listusing a loop.
+
+
+2. Using the list above, write a program that prints out only the numbers that are largeror equal to 20, and smaller or equal to 80. Finally print out how many numbers metthe condition.
+
+3. Write a program that asks the user for a number (stdin.readLineSync()), over andover again, forever, until he stops giving a number (just presses enter). Store everynumber in a List. At the end of the program, print out the largest and the smallestvalue the user entered.
+
+4. Write a program that asks the user for a string (stdin.readLineSync()), over and overagain, forever, until he stops giving a string (just presses enter). Store every entry in aList. At the end of the program, print out the contents of the list in a reversed order.
+
+
+
+> Larger then
+< Less then
+
+== Equals
+
+>= Larger or equal
+<= Less or equal
+
+!= Does not equal
