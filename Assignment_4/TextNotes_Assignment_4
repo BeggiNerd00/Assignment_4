@@ -30,3 +30,101 @@ Done:
 <= Less or equal
 
 != Does not equal
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+bool getYesNo(String prompt){
+  List<String> myNumbers = [];
+  bool input;
+  while(input == null){
+    String userInput = getString(prompt);
+    myNumbers.add(userInput);
+    if(userInput.toLowerCase() == 'yes'){
+      input = true;
+    } else if (userInput == ''){
+      print('Exiting now...\nHere are your numbers sorted from largest values to smallest values: ');
+      input = false;
+    }
+  }
+  myNumbers.sort();
+  print(myNumbers);
+
+
+  //return answer;
+}
+
+String getString(String prompt) {
+  print(prompt);
+  return stdin.readLineSync();
+}
+
+void main(>) {
+  bool output = getYesNo('Please add a number: ');
+}
+
+
+int findMin(List<int> numbers) {
+  return numbers.reduce(min);
+}
+int findMax(List<int> numbers) {
+  return numbers.reduce(max);
+}
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+[NOTES FRÁ KENNARA]
+[8:12 PM] Hjörtur Pálmi Pálsson
+Ok hvað ef þú prófar aðra nálgun
+
+[8:12 PM] Hjörtur Pálmi Pálsson
+Og þú aðlagar þína lausn að því
+
+[8:12 PM] Hjörtur Pálmi Pálsson
+Hvað ef þú grípur innputið frá stdin.readLineSync() sem streng, ekki parsa það strax í tölu
+Og athugar - EF strengurinn er tómur, þá hættir þú lykkjunni, ANNARS breytir þú honum í tölu og addar honum í tölulista
+
+[8:15 PM] Hjörtur Pálmi Pálsson
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Þannig þú getur stofnað tóma strengjabreytu fyrir ofan lykkjuna t.d.
+String userInput
+
+og svo keyrir lykkjan svo lengi sem userinput er ekki == ""
+
+while(userInput != "")
+
+og svo inn í lykkjunni þá lest þú inní þá breytu
+
+userInput = stdin.readLineSync();
+
+og athugar hvort hann inniheldur eitthvað
+if(userInput != "")
+Þá parsaru userInput í tölu og addar í lista
+
+
+
+þá gæti þú gert
+
+do {
+int number = int.tryparse(stdin.readLineSync());
+
+if (number != null){
+adda tölunni í listann
+}
+
+} while(number != null);
+
+
+
+
+[DO-WHILE]
+[8:23 PM] Hjörtur Pálmi Pálsson
+Bara venjuleg while lykkja, nema skilyrðið er athugað eftirá, í staðinn í upphafi
+
+[8:23 PM] Hjörtur Pálmi Pálsson
+Þannig þú guaranteear a.m.k. eina lykkju
+
+Eina ítrun ef ég á að vera bókstaflegur :)
+
+
+
+
+
